@@ -1,9 +1,330 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+html {
+	box-sizing: border-box;
+  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
-    background: magenta;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    background: beige;
+    font-size: 15px;
+    margin: 0;
 }
 p {
     font-size: 2em;
+}
+
+nav {
+  display: block;
+  position: relative;
+  padding-top: 3rem;
+  padding-right: 3rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:right;
+  margin: 0; 
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0.25rem;
+}
+
+nav ul a{
+  display: inline-grid;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+ul li.hover {
+  display: inline-block;
+  position: relative;
+  font-size: 4.25em;
+}
+
+ul li.hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+ul li.hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+li:first-child{
+  flex-grow: 3;
+  padding-left: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0em;
+  padding-bottom: 0.5em;
+  padding-left: 3rem;
+  align-items: center;
+}
+
+.welcome {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#introduction {
+  margin: 1rem;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.5em;
+}
+
+.logo {
+  margin: 0em;
+  padding: 0em;
+}
+
+#image img {
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 5px solid lightblue;
+  border-radius: 20px;
+}
+
+#start-big-btn {
+  color: white;
+  font-size: 1.3em;
+  background-color:#0087ca;
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+#canvas {
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 5px solid lightblue;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 70px;
+  overflow-y: hidden;
+  align-items: center;
+}
+
+.menu_button {
+  font-size: 1.3em;
+  background-color:#0087ca;
+  border: 0;
+  border-radius: 20px;
+  white-space: nowrap;
+  width: 200px;
+  display: grid;
+  color: white;
+  padding: 10px 10px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+#send-bottom-btn {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#send-big-btn {
+  color: white;
+  font-size: 1.3em;
+  background-color:#0087ca;
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+/*------ creating area ------ */
+
+#bodypage { 
+  display: none;
+}
+
+canvas {
+  position: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.options {
+  display: grid;
+  margin: auto;
+  width: 60%;
+}
+
+.options_bg, .options_theme, .options_message, .options_stickers {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 10px auto;
+  width: 100%;
+  height: 100px;
+  overflow-y:hidden;
+  background-color: #0087ca;
+  border-radius: 20px;
+  grid-row: 1/1;
+  grid-column: 1/1;
+}
+
+.theme_button {
+  display: flex;
+  flex: 0 0 auto;
+  top: 0;
+  border: 0;
+  width: 180px;
+  font-size: 0.8em;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #0087ca;
+  background-color:#fff;
+  grid-row: 1/1;
+  grid-column: 1/1;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+.bg_button {
+  display: flex;
+  flex: 0 0 auto;
+  top: 0;
+  border: 0;
+  width: 180px;
+  height: 80x;
+  font-size: 0.8em;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #0087ca;
+  background-color:#fff;
+  grid-row: 1/1;
+  grid-column: 1/1;font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+.stickers_button {
+  display: flex;
+  flex: 0 0 auto;
+  top: 0;
+  border: 0;
+  width: 180px;
+  font-size: 0.8em;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #0087ca;
+  background-color:#fff;
+  grid-row: 1/1;
+  grid-column: 1/1;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+.message_button {
+  display: flex;
+  flex: 0 0 auto;
+  border: 0;
+  width: 100%;
+  font-size: 1em;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #0087ca;
+  background-color:#fff;
+  grid-row: 1/1;
+  grid-column: 1/1;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+#messageInput {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1;
+  width: 80%;
+  height: 60px;
+  margin-top: 20px;
+  background-color: beige;
+  border-radius: 20px;
+  font-size: 1em;
+  text-align: center;
+  justify-content: center;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+.confirmBtn {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1;
+  width: 10%;
+  height: 60px;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding-top: 20px;
+  background-color: #0087ca;
+  color: white;
+  border-radius: 20px;
+  font-size: 1em;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }

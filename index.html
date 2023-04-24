@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- PUT A TITLE IN HERE -->
-    <title>This is the demo</title>
+    <title>Postcard Lab</title>
     <!-- PUT A DESCRIPTION IN HERE -->
     <meta name="description" content="describe content of the page here...." />
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
@@ -16,9 +16,100 @@
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
     <script src="scripts/scripts.js" defer></script>
+  
   </head>
   <body>
     <!-- YOUR HTML GOES HERE -->
+<header>
+<nav>
+  <ul>
+    <li class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Postcard Lab" width="200" height="60"></a>
+    </li>
+    <li class="hover">
+      <a href="index.html">Home</a>
+    </li>
+    <li class="hover">
+      <a href="project.html">Project</a>
+    </li>
+    <li class="hover">
+      <a href="about.html">About</a>
+    </li>
+  </ul>
+</nav>
+</header>
+<!------welcome and start------>
+<div class="welcome">
+<div>
+   <h2>Welcome to the Postcard Lab!</h2>
+</div>
+<div id="image"> <img src="images/cover.png" alt="Postcard" width="600" height="400"> </div>
+<div id="introduction">
+  <p>Custom your postcard here and send unique messages to your loved ones!
+  </p>
+</div>
+<div id="start-bottom-btn">
+  <button id="start-big-btn" class="start-btn"> START </button>
+</div>
+</div> 
+
+<!------canvas------>
+<div id="bodypage">
+ <div id="canvas">
+  <canvas id="myCanvas" alt="canvas" width="600" height="400"></canvas>
+</div>
+<div id="footer">
+  <div class="options">
+
+    <div class="options_message">
+      <div class="message_button">
+      <input type="text" id="messageInput" placeholder="Who is this card addressing to?"/>
+      <button class="confirmBtn" onclick="addTextToCanvas(document.getElementById('messageInput').value)">confirm</button>
+      </div>
+    </div>
+
+    <div class="options_stickers">
+      <p><button class="stickers_button" id="s_1">Stickers 1</button></p>
+      <p><button class="stickers_button" id="s_2">Stickers 2</button></p>
+      <p><button class="stickers_button" id="s_3">Stickers 3</button></p>
+      <p><button class="stickers_button" id="s_4">Stickers 4</button></p>
+      <p><button class="stickers_button" id="s_5">Stickers 5</button></p>
+      <p><button class="stickers_button" id="s_6">Stickers 6</button></p>
+      <p><button class="stickers_button" id="s_7">Stickers 7</button></p>
+      <p><button class="stickers_button" id="s_8">Stickers 8</button></p>
+      <p><button class="stickers_button" id="s_9">Stickers 9</button></p>
+    </div>
+
+     <div class="options_theme">
+      <p><button class="theme_button" id="t_1">Theme 1</button></p>
+      <p><button class="theme_button" id="t_2">Theme 2</button></p>
+      <p><button class="theme_button" id="t_3">Theme 3</button></p>
+      <p><button class="theme_button" id="t_4">Theme 4</button></p>
+      <p><button class="theme_button" id="t_5">Theme 5</button></p>
+      <p><button class="theme_button" id="t_6">Theme 6</button></p>
+    </div>
+  
+    <div class="options_bg">
+      <p><button class="bg_button" id="b_1">Background 1</button></p>
+      <p><button class="bg_button" id="b_2">Background 2</button></p>
+      <p><button class="bg_button" id="b_3">Background 3</button></p>
+      <p><button class="bg_button" id="b_4">Background 4</button></p>
+      <p><button class="bg_button" id="b_5">Background 5</button></p>
+      <p><button class="bg_button" id="b_6">Background 6</button></p>
+    </div>
+</div>
+
+<div id="menu">
+  <button class="menu_button" id="menu_bg">Background</button>
+  <button class="menu_button" id="menu_theme">Theme</button>
+  <button class="menu_button" id="menu_stickers">Stickers</button>
+  <button class="menu_button" id="menu_message">Message</button>
+</div>
+
+<div id="send-bottom-btn">
+  <button onclick="sendEmail()" id="send-big-btn" class="send-btn" style="display: flex;">Send!</button>
+</div>
+</div>
 
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
   </body>

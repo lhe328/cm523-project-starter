@@ -328,3 +328,45 @@ canvas {
   cursor: pointer;
   font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
+
+#menu_bg:hover{
+background-color: #F2BC13;
+box-shadow: 0.3em 0.3em #0087ca;
+}
+
+#menu_theme:hover{
+  background-color: #F2BC13;
+  box-shadow: 0.3em 0.3em #0087ca;
+}
+
+#menu_stickers:hover{
+background-color: #F2BC13;
+box-shadow: 0.3em 0.3em #0087ca;
+}
+
+#menu_message:hover{
+  background-color: #F2BC13;
+  box-shadow: 0.3em 0.3em #0087ca;
+}
+
+#start-big-btn:hover{
+background-color: #F2BC13;
+box-shadow: 0.3em 0.3em #0087ca;
+}
+
+.stickers_button:hover {
+  background-color: #F2BC13;
+}
+
+.bg_button:hover {
+  background-color: #F2BC13;
+}
+
+.theme_button:hover {
+  background-color: #F2BC13;
+}
+
+.message_button:hover {
+  background-color: #F2BC13;
+}
+

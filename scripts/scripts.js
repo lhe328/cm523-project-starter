@@ -247,10 +247,23 @@ function addTextToCanvas(text) {
     context.fillText(text, 430, 130, 600, 400);
 }
 
+// save postcard
+
+document.getElementById("save-big-btn").addEventListener("click", function(saveCanvas){
+    const dataUrl = canvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.download = 'postcard.png'
+    link.href = dataUrl;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+});
+
 // send postcard
 
-function sendEmail() {
+document.getElementById("send-big-btn").addEventListener("click", function(sendEmail) {
     const dataUrl = canvas.toDataURL();
     const mailtoLink = `mailto:recipient@example.com?subject=Someone send you a postcard&attachment=${encodeURIComponent(dataUrl)}`;
-            window.open(mailtoLink);
-}
+        window.open(mailtoLink);
+});

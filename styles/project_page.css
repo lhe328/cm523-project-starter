@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+html {
+	box-sizing: border-box;
+  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    background: beige;
+    font-size: 13px;
+    margin: 0;
+}
+p {
+    font-size: 2em;
+}
+
+nav {
+  display: block;
+  position: relative;
+  padding-top: 3rem;
+  padding-right: 3rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:right;
+  margin: 0; 
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0.25rem;
+}
+
+nav ul a{
+  display: inline-grid;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+ul li.hover {
+  display: inline-block;
+  position: relative;
+  font-size: 4.25em;
+}
+
+ul li.hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+ul li.hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+li:first-child{
+  flex-grow: 3;
+  padding-left: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0em;
+  padding-bottom: 0.5em;
+  padding-left: 3rem;
+  align-items: center;
+}
+
+h1 {
+    color: #E86606;
+    font-size:25px;
+    font-weight: bold;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.project div{
+    display: grid;
+    border-radius: 25px;
+    justify-content: center;
+    background-color: #0087ca;
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.project {
+    display: grid;
+    margin: auto;
+    width: 200px;
+    height: 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-gap: 30px; 
+    justify-content: center;
+    margin-bottom: 4em;
+}

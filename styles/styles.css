@@ -1,5 +1,5 @@
-/* ===== YOUR CSS GOES HERE ===== */
-/* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+@charset "UTF-8";
+
 html {
 	box-sizing: border-box;
   }
@@ -15,6 +15,17 @@ body {
     font-size: 15px;
     margin: 0;
 }
+
+@media screen  and (max-width: 500px) {
+  #canvas {
+    position: center;
+    width: 85%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 p {
     font-size: 2em;
 }
@@ -87,20 +98,19 @@ li:first-child{
 }
 
 .welcome {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin:0;
   justify-content: center;
   text-align: center;
   font-size: 1.5em;
+  padding-bottom: 0%;
 }
 
 #introduction {
-  margin: 1rem;
+  margin: 0;
   justify-content: center;
   text-align: center;
   font-size: 0.5em;
+  padding: 0;
 }
 
 .logo {
@@ -128,6 +138,7 @@ li:first-child{
   padding: 8px 20px;
   cursor: pointer;
   font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+  margin-bottom: 4em;
 }
 
 #canvas {
@@ -135,8 +146,8 @@ li:first-child{
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 0%;
+  margin-bottom: 0%;
   border: 5px solid lightblue;
 }
 
@@ -227,7 +238,7 @@ canvas {
 }
 
 .options_bg, .options_theme, .options_message, .options_stickers {
-  display: flex;
+  display: none;
   flex-wrap: nowrap;
   margin: 10px auto;
   width: 100%;
@@ -374,6 +385,10 @@ box-shadow: 0.3em 0.3em #0087ca;
 
 .stickers_button:hover {
   background-color: #F2BC13;
+}
+
+.stickers_button:visited{
+  color: #F2BC13;
 }
 
 .bg_button:hover {
